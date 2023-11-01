@@ -13,6 +13,17 @@ Returns:
 """
 
 if __name__ == "__main__":
+    
+    """
+    Gets the employee ID
+
+    Puts the links of APIs into variables
+
+    Retrieves data from the API and parses the data
+
+    Uses the data to generate a progress report for each employee
+    """
+
     # Check for the correct number of arguments
     if len(sys.argv) != 2:
         print("Usage: ./0-gather_data_from_an_API.py <employee_id>")
