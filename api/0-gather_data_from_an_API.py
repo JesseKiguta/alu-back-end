@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import requests
+import sys
 
 
 """
@@ -12,8 +14,6 @@ Returns:
 """
 
 if __name__ == "__main__":
-    import requests
-    import sys
 
     """
     Gets the employee ID
