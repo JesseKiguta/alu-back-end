@@ -50,10 +50,10 @@ if __name__ == "__main__":
         name = user_data['name']
 
     # Filter completed and total tasks for the specified employee
-    completed_tasks = [task for task in todo_data 
-                       if task['userId'] == int(employee_id) 
-                       and task['completed']]
-    total_tasks = [task for task in todo_data 
+    completed_tasks = [task for task in todo_data
+                       if task['userId'] == int(employee_id) and
+                       task['completed']]
+    total_tasks = [task for task in todo_data
                    if task['userId'] == int(employee_id)]
 
     # Display the employee's todo list progress
