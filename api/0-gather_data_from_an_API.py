@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     # Get the employee ID from the command line argument
     employee_id = sys.argv[1]
-    
+
     # Define the API endpoints for todos and users
     todo_url = 'https://jsonplaceholder.typicode.com/todos'
     user_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
@@ -50,10 +50,15 @@ if __name__ == "__main__":
         name = user_data['name']
 
     # Filter completed and total tasks for the specified employee
-    completed_tasks = [task for task in todo_data if task['userId'] == int(employee_id) and task['completed']]
-    total_tasks = [task for task in todo_data if task['userId'] == int(employee_id)]
+    completed_tasks = [task for task in todo_data 
+                       if task['userId'] == int(employee_id) 
+                       and task['completed']]
+    total_tasks = [task for task in todo_data 
+                   if task['userId'] == int(employee_id)]
 
     # Display the employee's todo list progress
-    print(f"Employee {name} is done with tasks({len(completed_tasks)}/{len(total_tasks)}):")
+    fin = len(completed_tasks)
+    sum = len(total_tasks)
+    print(f"Employee {name} is done with tasks({fin}/{sum}):")
     for task in completed_tasks:
         print("\t " + task['title'])
