@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-import requests
-import sys
+
 
 """
 Retrieve and display the todo list progress for a specific employee.
@@ -13,7 +12,9 @@ Returns:
 """
 
 if __name__ == "__main__":
-    
+    import requests
+    import sys
+
     """
     Gets the employee ID
 
