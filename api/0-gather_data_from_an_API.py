@@ -5,10 +5,10 @@
 Retrieve and display the todo list progress for a specific employee.
 
 Args:
-    employee_id (int): The ID of the employee for whom to fetch progress.
+employee_id (int): The ID of the employee for whom to fetch progress.
 
 Returns:
-    None
+None
 """
 
 import requests
@@ -59,6 +59,7 @@ if __name__ == "__main__":
     # Display the employee's todo list progress
     fin = len(completed_tasks)
     sum = len(total_tasks)
+    
     print(f"Employee {name} is done with tasks({fin}/{sum}):")
     for task in completed_tasks:
         print("\t " + task['title'])
