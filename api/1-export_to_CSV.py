@@ -49,20 +49,21 @@ if __name__ == "__main__":
 
     # Open the CSV file for writing
     with open(csv_filename, 'w', newline='') as csv_file:
+	# Create a CSV writer object
         csv_writer = csv.writer(csv_file)
-
-    # Write the CSV header
-    csv_writer.writerow(["USER_ID", "USERNAME",
+	# Write the CSV header
+    	csv_writer.writerow(["USER_ID", "USERNAME",
 			"TASK_COMPLETED_STATUS", "TASK_TITLE"])
 
     # Iterate through the todo items
     for todo in todo_data:
-	# Gets the employees' data to be printed
+	# Gets the employees data to be printed
 	if todo.get('userId') == employee_id:
+		# Matches the user to their employee ID
 		user = next((user for user in user_data if
 			user['id'] == employee_id), None)
-		# Writes task details to the CSV file
                 if user:
+		    # Writes task details to the CSV file
                     employee_name = user['name']
                     task_completed = "completed" if todo['completed']
 					else "not completed"
