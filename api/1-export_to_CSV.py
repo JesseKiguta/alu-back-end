@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     Retrieves data from the API and parses the data
 
-    Uses the data to generate a progress report for each employee
+    Exports the data in the CSV format
     """
 
     # Check for the correct number of arguments
