@@ -59,7 +59,6 @@ if __name__ == "__main__":
     # Display the employee's todo list progress
     fin = len(completed_tasks)
     sum = len(total_tasks)
-    
     print(f"Employee {name} is done with tasks({fin}/{sum}):")
     for task in completed_tasks:
         print("\t " + task['title'])
