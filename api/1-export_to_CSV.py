@@ -2,13 +2,14 @@
 
 
 """
-Retrieve and display the todo list progress for a specific employee.
+Retrieve and print information about an employee's tasks.
 
 Args:
-employee_id (int): The ID of the employee for whom to fetch progress.
+employee_id (int): The employee ID.
 
-Returns:
-None
+Prints:
+Employee progress information for each task in the following format:
+'USERID','USERNAME','TASK_COMPLETED_STATUS','TASK_TITLE'
 """
 
 import csv
@@ -59,6 +60,7 @@ if __name__ == "__main__":
 	if todo.get('userId') == employee_id:
 		user = next((user for user in user_data if
 			user['id'] == employee_id), None)
+		# Writes task details to the CSV file
                 if user:
                     employee_name = user['name']
                     task_completed = "completed" if todo['completed'] 
