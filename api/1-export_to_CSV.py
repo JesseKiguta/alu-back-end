@@ -57,13 +57,14 @@ if __name__ == "__main__":
 
     # Iterate through the todo items
     for todo in todo_data:
+	# Gets the employees' data to be printed
 	if todo.get('userId') == employee_id:
 		user = next((user for user in user_data if
 			user['id'] == employee_id), None)
 		# Writes task details to the CSV file
                 if user:
                     employee_name = user['name']
-                    task_completed = "completed" if todo['completed'] 
+                    task_completed = "completed" if todo['completed']
 					else "not completed"
                     task_title = todo['title']
                     csv_writer.writerow([employee_id, employee_name,
